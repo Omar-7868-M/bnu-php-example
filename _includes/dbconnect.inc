@@ -2,12 +2,12 @@
 $servername = "localhost";
 $dbname = "cw2";
 $username = "pma";
-$password = "blank";;
+$password = "";;
 
 	//  replace mysqllogin and mysqlpassword with your own
-	$conn = mysqli_connect("localhost", "cw2", "pma", "blank");
+	$conn = new mysqli("localhost", "cw2", "pma", "");
 
-	$conn = new mysqli($servername, $username, $password);
+	$conn = new mysqli($servername, $username, $password, $dbname);
 
 	if (mysqli_connect_errno()) {
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();

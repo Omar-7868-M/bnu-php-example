@@ -1,6 +1,6 @@
 <?php
 	//  replace mysqllogin and mysqlpassword with your own
-	$conn = mysqli_connect("localhost", "cw2", "root", "");
+	$conn = mysqli_connect("localhost", "cw2", "pma", "");
 
 	$conn = new mysqli($servername. $username, $password);
 

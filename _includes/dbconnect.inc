@@ -2,10 +2,10 @@
 $servername = "localhost";
 $dbname = "cw2";
 $username = "pma";
-$password = "";;
+$password = "";
 
 	//  replace mysqllogin and mysqlpassword with your own
-	$conn = new mysqli("localhost", "cw2", "pma", "");
+	$conn = new mysqli("localhost", "pma", "", "cw2");
 
 	$conn = new mysqli($servername, $username, $password, $dbname);
 

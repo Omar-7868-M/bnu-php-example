@@ -1,4 +1,9 @@
 <?php
+$servername = "localhost";
+$dbname = "cw2";
+$username = "pma";
+$password = "";;
+
 	//  replace mysqllogin and mysqlpassword with your own
 	$conn = mysqli_connect("localhost", "cw2", "pma", "");
 

@@ -1,3 +1,20 @@
+<html>
+<head>
+
+<body>
+    <style>
+
+        body
+        {
+            background-color: aqua; 
+        }
+
+    </style>
+
+
+</body>
+</html>
+
 
 <?php echo $message; ?>
 

@@ -41,41 +41,22 @@ if (isset($_SESSION['id'])) {
       $data['content'] = <<<EOD
 
    <h2>My Details</h2>
-
    <form name="frmdetails" action="" method="post">
    First Name :
-   <input name="txtfirstname" type="text" value="{$row['firstname']}" />
-   <br/>
+   <input name="txtfirstname" type="text" value="{$row['firstname']}" /><br/>
    Surname :
-   <input name="txtlastname" type="text"  value="{$row['lastname']}" />
-   <br/>
+   <input name="txtlastname" type="text"  value="{$row['lastname']}" /><br/>
    Number and Street :
-   <input name="txthouse" type="text"  value="{$row['house']}" />
-   <br/>
+   <input name="txthouse" type="text"  value="{$row['house']}" /><br/>
    Town :
-   <input name="txttown" type="text"  value="{$row['town']}" />
-   <br/>
+   <input name="txttown" type="text"  value="{$row['town']}" /><br/>
    County :
-   <input name="txtcounty" type="text"  value="{$row['county']}" />
-   <br/>
+   <input name="txtcounty" type="text"  value="{$row['county']}" /><br/>
    Country :
-   <input name="txtcountry" type="text"  value="{$row['country']}" />
-   <br/>
+   <input name="txtcountry" type="text"  value="{$row['country']}" /><br/>
    Postcode :
-   <input name="txtpostcode" type="text"  value="{$row['postcode']}" />
-   <br/>
-
-   <!---------Delete button------->
-   
-   Checkbox
-   <input type="checkbox" type="text" value="" />
-
+   <input name="txtpostcode" type="text"  value="{$row['postcode']}" /><br/>
    <input type="submit" value="Save" name="submit"/>
-
-   
-   
-
-
    </form>
 
 EOD;

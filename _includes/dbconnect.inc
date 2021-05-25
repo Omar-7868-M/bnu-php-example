@@ -1,11 +1,11 @@
 <?php
 $servername = "localhost";
-$dbname = "cw2";
+$dbname = "cw2 oss";
 $username = "root";
 $password = "";
 
 	//  replace mysqllogin and mysqlpassword with your own
-	$conn = new mysqli("localhost", "root", "", "cw2");
+	$conn = new mysqli("localhost", "root", "", "cw2 oss");
 
 	$conn = new mysqli($servername, $username, $password, $dbname);
 

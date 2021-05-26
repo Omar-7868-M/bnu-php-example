@@ -77,35 +77,55 @@ if(isset($_POST['btncreate'])){
   $dateofbirth = mysqli_real_escape_string($conn, $_POST['dateofbirth']);
   $password = mysqli_real_escape_string($conn, $_POST['password']);
   $firstline = mysqli_real_escape_string($conn, $_POST['txtfirstline']);
+  $house = mysqli_real_escape_string($conn, $_POST['txthouse']);
   $town = mysqli_real_escape_string($conn, $_POST['txttown']);
   $county = mysqli_real_escape_string($conn, $_POST['txtcounty']);
   $country = mysqli_real_escape_string($conn, $_POST['txtcountry']);
   $postcode = mysqli_real_escape_string($conn, $_POST['txtpostcode']);
+
+$sql = "INSERT INTO 'student'('studentid', 'password', 'dob', 'firstname', 'lastname', 'house', 'town', 'county', 'country', 'postcode')
+VALUES
+('$studentid', '$password', '$dob', '$fname', '$lname', '$house', '$town', '$county', '$country', '$postcode')";
+$result = mysqli_query($conn, $sql);
+$_POST = null;
+
+header("Location: addstudent.php")
+
   
   $hashedpass = password_hash($password, PASSWORD_DEFAULT);
   
-  $idcheck = mysqli_query($conn, "SELECT studentid FROM student WHERE studentid = $ID"); //validation query for duplicate student entries.
+  $idcheck = mysqli_query($conn, "SELECT studentid FROM student WHERE studentid = $ID"); //validation To prevent double entry
+
   $count = mysqli_num_rows($idcheck);
   if($count>0)
   {
      echo "<H3>Error: Unfortunately, there is already a student with this ID.</H3>";
   }
+
   else
+
   {
     $result = mysqli_query($conn, " INSERT INTO student(studentid,password,dob,firstname,lastname,
       house,town,county,country,postcode) VALUES
-('$ID','$hashedpass', '$dateofbirth', '$fname', '$lname', '$firstline', '$town', '$county', 
-  '$country', '$postcode');");
-  echo "<H3>Success: A new user has been created!</H3>";
+('$ID','$hashedpass', '$dateofbirth', '$fname', '$lname', '$firstline', '$town', '$county', '$country', '$postcode');");
+
+      echo "<H3>Success: A new user has been created!</H3>";
+
   }
   
-}
+  }
+
    echo template("templates/default.php", $data); 
-}
-else {
-   
+
+  }
+
+  else 
+  
+  {   
+
    header("Location: index.php");
-}
+
+  }
   
   echo template("templates/partials/footer.php");
   ?>

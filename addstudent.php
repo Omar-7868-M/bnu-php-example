@@ -6,8 +6,6 @@
    if (isset($_SESSION['id'])) {
      echo template("templates/partials/header.php");
      echo template("templates/partials/nav.php");
-
-
 <html>
 
 <h2> Student Details</h2>
@@ -135,14 +133,6 @@ else
 {
   echo "ERROR" . $sql5 "</br>" . $conn->error;
 }
-
-
-
-
-
-
-
-
   
   $hashedpass = password_hash($password, PASSWORD_DEFAULT);
   

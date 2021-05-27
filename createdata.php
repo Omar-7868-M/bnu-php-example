@@ -18,7 +18,7 @@ $sql4 = "INSERT INTO 'student'('studentid', 'password', 'dob', 'firstname', 'las
 
 $sql5 = "INSERT INTO 'student'('studentid', 'password', 'dob', 'firstname', 'lastname', 'house', 'town', 'county', 'country', 'postcode')" VALUES ('2190552', '127', '16/1/93', 'Jung', 'Kook', '5', 'chesham', 'bucks', 'United Kingdom', 'HP5 2JK)';
 
-if ($conn->query($sql1) = TRUE) 
+if ($conn->query($sql1) === TRUE) 
 {
   echo "NEW RECORD CREATED SUCCESSFULY"</br>;
 }
@@ -26,7 +26,7 @@ else
 {
   echo "ERROR" . $sql1 "</br>" . $conn->error;
 }
-if ($conn->query($sql2) = TRUE)
+if ($conn->query($sql2) === TRUE)
 {
   echo "NEW RECORD CREATED SUCCESSFULY"</br>;
 }
@@ -34,7 +34,7 @@ else
 {
   echo "ERROR" . $sql2 "</br>" . $conn->error;
 }
-if ($conn->query($sql3) = TRUE)
+if ($conn->query($sql3) === TRUE)
 {
   echo "NEW RECORD CREATED SUCCESSFULY"</br>;
 }
@@ -42,7 +42,7 @@ else
 {
   echo "ERROR" . $sql3 "</br>" . $conn->error;
 }
-if ($conn->query($sql4) = TRUE)
+if ($conn->query($sql4) === TRUE)
 {
   echo "NEW RECORD CREATED SUCCESSFULY"</br>;
 }
@@ -50,7 +50,7 @@ else
 {
   echo "ERROR" . $sql4 "</br>" . $conn->error;
 }
-if ($conn->query($sql5) = TRUE)
+if ($conn->query($sql5) === TRUE)
 {
   echo "NEW RECORD CREATED SUCCESSFULY"</br>;
 }

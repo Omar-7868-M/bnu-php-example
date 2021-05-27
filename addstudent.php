@@ -23,7 +23,7 @@ Password:
 </br></br>
 
 Date of Birth:
-<input type ="date" name ="dobd" size ="20" class ="form-control"/>
+<input type ="date" name ="dob" size ="20" class ="form-control"/>
 </br></br>
 
 First Name:
@@ -63,25 +63,6 @@ Student Image:
 </br></br>
 
 <input type ="submit" class = "btn btn-default" value ="Save"/>
-
-</form>
-</html>
-
-$data['content'] .= '</form>';
-
-if(isset($_POST['btncreate'])){
-  
-  $ID = mysqli_real_escape_string($conn, $_POST['txtID']);
-  $fname = mysqli_real_escape_string($conn, $_POST['txtfname']);
-  $lname = mysqli_real_escape_string($conn, $_POST['txtlname']);
-  $dateofbirth = mysqli_real_escape_string($conn, $_POST['dateofbirth']);
-  $password = mysqli_real_escape_string($conn, $_POST['password']);
-  $firstline = mysqli_real_escape_string($conn, $_POST['txtfirstline']);
-  $house = mysqli_real_escape_string($conn, $_POST['txthouse']);
-  $town = mysqli_real_escape_string($conn, $_POST['txttown']);
-  $county = mysqli_real_escape_string($conn, $_POST['txtcounty']);
-  $country = mysqli_real_escape_string($conn, $_POST['txtcountry']);
-  $postcode = mysqli_real_escape_string($conn, $_POST['txtpostcode']);
 
 $sql = "INSERT INTO 'student'('studentid', 'password', 'dob', 'firstname', 'lastname', 'house', 'town', 'county', 'country', 'postcode')" VALUES ('21905761', '123', '26/12/99', 'Ji-Min', 'Park', '55', 'chesham', 'bucks', 'United Kingdom', 'BP5 2PA';
 
@@ -135,6 +116,26 @@ else
 {
   echo "ERROR" . $sql5 "</br>" . $conn->error;
 }
+
+</form>
+</html>
+
+$data['content'] .= '</form>';
+
+if(isset($_POST['btncreate'])){
+  
+  $ID = mysqli_real_escape_string($conn, $_POST['txtID']);
+  $fname = mysqli_real_escape_string($conn, $_POST['txtfname']);
+  $lname = mysqli_real_escape_string($conn, $_POST['txtlname']);
+  $dateofbirth = mysqli_real_escape_string($conn, $_POST['dateofbirth']);
+  $password = mysqli_real_escape_string($conn, $_POST['password']);
+  $firstline = mysqli_real_escape_string($conn, $_POST['txtfirstline']);
+  $house = mysqli_real_escape_string($conn, $_POST['txthouse']);
+  $town = mysqli_real_escape_string($conn, $_POST['txttown']);
+  $county = mysqli_real_escape_string($conn, $_POST['txtcounty']);
+  $country = mysqli_real_escape_string($conn, $_POST['txtcountry']);
+  $postcode = mysqli_real_escape_string($conn, $_POST['txtpostcode']);
+
 
 
 

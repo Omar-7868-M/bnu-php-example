@@ -3,7 +3,7 @@
    include("_includes/config.inc");
    include("_includes/dbconnect.inc");
    include("_includes/functions.inc");
-   include("addstudent.php");
+   //include("addstudent.php");
 
    echo template("templates/partials/header.php");
 

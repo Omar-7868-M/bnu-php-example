@@ -1,5 +1,15 @@
 <?php
 
+$servername = "localhost";
+$dbname = "cw2 oss";
+
+$username = "root";
+
+$password = "";
+
+//  replace mysqllogin and mysqlpassword with your own
+$conn = new mysqli("localhost", "root", "", "cw2 oss");
+
 $sql = "INSERT INTO student('studentid', 'password', 'dob', 'firstname', 'lastname', 'house', 'town', 'county', 'country', 'postcode') VALUES ('21905761', '123', '26/12/99', 'Ji-Min', 'Park', '55', 'chesham', 'bucks', 'United Kingdom', 'BP5 2PA')";
 
 $sql1 = "INSERT INTO student('studentid', 'password', 'dob', 'firstname', 'lastname', 'house', 'town', 'county', 'country', 'postcode') VALUES ('21905762', '121', '26/11/98', 'Ho-Seok', 'Jung', '2', 'chesham', 'bucks', 'United Kingdom', 'TP5 2JH')";

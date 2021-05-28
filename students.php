@@ -4,6 +4,36 @@ include("_includes/config.inc");
 include("_includes/dbconnect.inc");
 include("_includes/functions.inc");
 
+<html>
+    <head>
+        <title>
+            Insert Data into MYSQL Database Using PHP
+        </title>
+    </head>
+    <body>
+        <form action="createdata.php" method="POST">
+            studentID: <input type="text" name="studentid">
+            <br/>
+            password: <input type="text" name="password">
+            <br/> 
+            dob: <input type="date" name="dob">
+            <br/>
+            firstname: <input type="text" name="firstname">
+            <br/>
+            lastname: <input type="text" name="lastname">
+            <br/>
+            house: <input type="text" name="house">
+            <br/>
+            town: <input type="text" name="town">           
+            <br/>
+            county: <input type="text" name="county">
+            <br/>
+            country: <input type="text" name="country">
+            <br/>
+            postcode: <input type="text" name="postcode">
+        </form>
+    </body>
+</html>
 
 // check logged in
 if (isset($_SESSION['id'])) {

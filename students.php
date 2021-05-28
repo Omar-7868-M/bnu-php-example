@@ -1,9 +1,9 @@
-  
 <?php
 
 include("_includes/config.inc");
 include("_includes/dbconnect.inc");
 include("_includes/functions.inc");
+include("_includes/createdata.php");
 
 // check logged in
 if (isset($_SESSION['id'])) {

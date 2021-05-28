@@ -25,7 +25,7 @@ else
 }
 if ($conn->query($sql2) === TRUE)
 {
-  echo "NEW RECORD CREATED SUCCESSFULY"</br>;
+  echo "NEW RECORD CREATED SUCCESSFULY";
 }
 else 
 {
@@ -33,7 +33,7 @@ else
 }
 if ($conn->query($sql3) === TRUE)
 {
-  echo "NEW RECORD CREATED SUCCESSFULY"</br>;
+  echo "NEW RECORD CREATED SUCCESSFULY";
 }
 else 
 {
@@ -41,7 +41,7 @@ else
 }
 if ($conn->query($sql4) === TRUE)
 {
-  echo "NEW RECORD CREATED SUCCESSFULY"</br>;
+  echo "NEW RECORD CREATED SUCCESSFULY";
 }
 else 
 {
@@ -49,7 +49,7 @@ else
 }
 if ($conn->query($sql5) === TRUE)
 {
-  echo "NEW RECORD CREATED SUCCESSFULY"</br>;
+  echo "NEW RECORD CREATED SUCCESSFULY";
 }
 else 
 {

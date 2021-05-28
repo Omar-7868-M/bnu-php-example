@@ -18,7 +18,7 @@ include("_includes/functions.inc");
 if ($conn->query($sql1) === TRUE) 
 {
   echo "NEW RECORD CREATED SUCCESSFULY";
-}<break>
+}
 else 
 {
   echo "ERROR" . $sql1 "</br>" . $conn->error;

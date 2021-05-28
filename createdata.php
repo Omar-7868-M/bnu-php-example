@@ -2,13 +2,20 @@
 
 $servername = "localhost";
 $dbname = "cw2 oss";
-
 $username = "root";
-
 $password = "";
 
-//  replace mysqllogin and mysqlpassword with your own
-$conn = new mysqli("localhost", "root", "", "cw2 oss");
+$studentid = $_POST['studentid'];
+$password = $_POST['password'];
+$dateofbirth = $_POST['dob'];
+$fname = $_POST['firstname'];
+$lname = $_POST[';astname'];
+$house = $_POST['house'];
+$town = $_POST['town'];
+$county = $_POST['county'];
+$country = $_POST['country'];
+$postcode = $_POST['postcode'];
+
 
 $sql = "INSERT INTO student('studentid', 'password', 'dob', 'firstname', 'lastname', 'house', 'town', 'county', 'country', 'postcode') VALUES ('21905761', '123', '26/12/99', 'Ji-Min', 'Park', '55', 'chesham', 'bucks', 'United Kingdom', 'BP5 2PA')";
 

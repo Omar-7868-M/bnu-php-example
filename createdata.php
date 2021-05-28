@@ -18,10 +18,10 @@ include("_includes/functions.inc");
 if ($conn->query($sql1) === TRUE) 
 {
   echo "NEW RECORD CREATED SUCCESSFULY";
-}
+}<break>
 else 
 {
-  echo "ERROR" . $sql1 "</br>" . $conn->error;
+  echo "ERROR" . $sql1 . $conn->error;
 }
 if ($conn->query($sql2) === TRUE)
 {
@@ -29,7 +29,7 @@ if ($conn->query($sql2) === TRUE)
 }
 else 
 {
-  echo "ERROR" . $sql2 "</br>" . $conn->error;
+  echo "ERROR" . $sql2 . $conn->error;
 }
 if ($conn->query($sql3) === TRUE)
 {
@@ -37,7 +37,7 @@ if ($conn->query($sql3) === TRUE)
 }
 else 
 {
-  echo "ERROR" . $sql3 "</br>" . $conn->error;
+  echo "ERROR" . $sql3 . $conn->error;
 }
 if ($conn->query($sql4) === TRUE)
 {
@@ -45,7 +45,7 @@ if ($conn->query($sql4) === TRUE)
 }
 else 
 {
-  echo "ERROR" . $sql4 "</br>" . $conn->error;
+  echo "ERROR" . $sql4 . $conn->error;
 }
 if ($conn->query($sql5) === TRUE)
 {
@@ -53,5 +53,5 @@ if ($conn->query($sql5) === TRUE)
 }
 else 
 {
-  echo "ERROR" . $sql5 "</br>" . $conn->error;
+  echo "ERROR" . $sql5 . $conn->error;
 }

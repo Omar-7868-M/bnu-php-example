@@ -1,3 +1,22 @@
+<html>
+<head>
+
+<body>
+    <style>
+
+        body
+        {
+            background-color: aqua; 
+        }
+
+    </style>
+
+
+</body>
+</html>
+
+
+
 <?php
 
    include("_includes/config.inc");

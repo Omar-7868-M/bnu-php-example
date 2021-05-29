@@ -19,7 +19,7 @@ $postcode = $_POST['postcode'];
 $sql = "INSERT INTO student (student id, password, dob, firstname, lastname, house, town, county, country, postcode) VALUES ('$studentid', '$password', $dateofbirth', '$fname', '$lname', '$house', '$town', '$county', '$country', '$postcode')";
 
 
-if(!mysqli_query($conn,$sql))
+if ($conn->query($sql1) === TRUE)
 {
   echo 'Not Inserted';
 }

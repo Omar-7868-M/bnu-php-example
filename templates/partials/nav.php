@@ -5,5 +5,7 @@
    <a href="assignmodule.php">Assign Module</a> |
    <a href="details.php">My Details</a> |
    <a href="logout.php">Logout</a>
+   <a href="index.html">add records</a>
+
 
 </div>

@@ -23,28 +23,54 @@ if (isset($_SESSION['id'])) {
    $data['content'] .= "<tr><th>Student ID</th><th>DOB</th><th>First Name</th><th>Last Name</th><th>House</th><th>Town</th>
    <th>County</th><th>Country</th><th>Postcode</th><th>Select</th></tr>";
 
-   while($row = mysqli_fetch_assoc($result)) {
-      //echo "'$row[firstname]'&nbsp;'$row[lastname]'&nbsp;'$row[dob]'</br>";
-    // prepare page content
-     $data['content'] .= "<form action='_includes/delete.php' method='POST'><table border='1' >";
-     $data['content'] .= "<tr><th colspan='6' text-align='center'>  students  </th></tr>";
-     $data['content'] .= "<tr><th>Photo</th><th>FirstName</th><th>Lastname</th><th>dob</th><th>House</th><th>Town</th><th>County</th><th>Country</th><th>Postcode</th><th>select</th></tr>";
-     // Display the modules within the html table
-     while($row = mysqli_fetch_array($result)) {
-      $data['content'] .= "<tr><td><img src='_includes/uploads/$row[picture]'  style='width:50px;height:50px;'></td>"; 
-        $data['content'] .= "<td> $row[firstname] </td><td> $row[lastname] </td>";
-        $data['content'] .= "<td> $row[dob] </td><td> $row[house]</td><td> $row[town]</td><td> $row[county] </td> <td> $row[country] </td><td> $row[postcode] </td><td><input type='checkbox' name='StudentID[]'  value='$row[studentid]'></td></tr>";
+   // Display the modules within the html table
+   while($row = mysqli_fetch_array($result)) 
+   
+   {
+
+      $data['content'] .= "<tr><td> $row[studentid] </td><td> $row[dob] </td>";
+      $data['content'] .= "<td> $row[firstname] </td><td> $row[lastname] </td>
+      <td> $row[house] </td><td> $row[town] </td><td> $row[county] </td><td> $row[country] </td>
+      <td> $row[postcode] </td> </td> ";
+      $data['content'] .= "<td> <input type ='checkbox' name='delrecords[]' value='".$row['studentid']."' </td></tr> </td>";
+      
+   }
+
+   $data['content'] .= "</table>";
+   $data['content'] .= "</br></br></br>";
+   $data['content'] .= '<input type="submit" name="delete" value="Delete Records">';
+   $data['content'] .= "</form>";
+
+   if(isset($_POST['delete']))
+   
+   {
+
+     $checkboxcount = count($_POST['delrecords']);
+     $i=0;
+     while($i<$checkboxcount)
+
+     {                                 //count of records to delete
+
+       $theid = $_POST['delrecords'][$i];
+       mysqli_query($conn, "DELETE FROM student WHERE studentid= '$theid'");
+       $i++;
+
      }
-     $data['content'] .= "</table>  <div><input type='submit' name='Delete' value='Delete'></div></form>";
-      }
-      // render the template
+
+      echo "<H3>Success: Data successfully removed!</H3>";
+   }
+
+   // render the template
    echo template("templates/default.php", $data);
 
-} else {
+} 
+
+else 
+
+{
    header("Location: index.php");
 }
 
-echo template("templates/partials/footer.php");
-
+echo template("templates/partials/footer.php"); 
 mysqli_close($conn);
 ?>

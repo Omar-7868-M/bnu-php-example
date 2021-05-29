@@ -27,7 +27,7 @@ else
 {
   echo 'Inserted';
 }
-header("refresh:2; url=details.php");
+header("refresh:2; url=index.html");
 
 //$sql = "INSERT INTO student('studentid', 'password', 'dob', 'firstname', 'lastname', 'house', 'town', 'county', 'country', 'postcode') VALUES ('21905761', '123', '26/12/99', 'Ji-Min', 'Park', '55', 'chesham', 'bucks', 'United Kingdom', 'BP5 2PA')";
 

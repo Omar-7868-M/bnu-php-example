@@ -65,3 +65,19 @@ else
 echo template("templates/partials/footer.php"); 
 mysqli_close($conn);
 ?>
+
+<html>
+<head>
+
+<body>
+    <style>
+
+        body
+        {
+            background-color: aqua; 
+        }
+
+    </style>
+
+</body>
+</html>

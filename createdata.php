@@ -1,55 +1,50 @@
 <?php
 
-$sql = "INSERT INTO student('studentid', 'password', 'dob', 'firstname', 'lastname', 'house', 'town', 'county', 'country', 'postcode') VALUES ('21905761', '123', '26/12/99', 'Ji-Min', 'Park', '55', 'chesham', 'bucks', 'United Kingdom', 'BP5 2PA')";
+$sql1="INSERT INTO `student` (`studentid`, `password`, `dob`, `firstname`, `lastname`, `house`, `town`, `county`, `country`, `postcode`) VALUES
+('20000000', '$2y$10$.LJBOl64nZWEVVE/v5mgNuzR01zx1zoyXuGJUa/zp2U.MQxkps3LS', '1974-11-10', 'Jon', 'Smith', '23 Victoria Road', 'High Wycombe', 'Bucks', 'UK', 'HP11 1RT');";
+$sql2="INSERT INTO`student` (`studentid`, `password`, `dob`, `firstname`, `lastname`, `house`, `town`, `county`, `country`, `postcode`) VALUES
+('20000001', '$2y$10$.LJBOl64nZWEVVE/v5mgNuzR01zx1zoyXuGJUa/zp2U.MQxkps3Lg', '1974-11-11', 'ali', 'ejaz', '25 Victoria Road', 'High Wycombe', 'Bucks', 'UK', 'HP11 1RT');";
+$sql3="INSERT INTO`student` (`studentid`, `password`, `dob`, `firstname`, `lastname`, `house`, `town`, `county`, `country`, `postcode`) VALUES
+('20000002', '$2y$10$.LJBOl64nZWEVVE/v5mgNuzR01zx1zoyXuGJUa/zp2U.MQxkps3Lf', '1974-11-12', 'cristiano', 'ronaldo', '27 Victoria Road', 'High Wycombe', 'Bucks', 'UK', 'HP11 1RT');";
+$sql4="INSERT INTO `student` (`studentid`, `password`, `dob`, `firstname`, `lastname`, `house`, `town`, `county`, `country`, `postcode`) VALUES
+('20000003', '$2y$10$.LJBOl64nZWEVVE/v5mgNuzR01zx1zoyXuGJUa/zp2U.MQxkps3Lz', '1974-11-13', 'raheem', 'Sterling', '29 Victoria Road', 'High Wycombe', 'Bucks', 'UK', 'HP11 1RT');";
+$sql5="INSERT INTO `student` (`studentid`, `password`, `dob`, `firstname`, `lastname`, `house`, `town`, `county`, `country`, `postcode`) VALUES
+('20000004', '$2y$10$.LJBOl64nZWEVVE/v5mgNuzR01zx1zoyXuGJUa/zp2U.MQxkps3Lz', '1974-11-14', 'Lionel', 'Messi', '31 Victoria Road', 'High Wycombe', 'Bucks', 'UK', 'HP11 1RT');";
 
-$sql1 = "INSERT INTO student('studentid', 'password', 'dob', 'firstname', 'lastname', 'house', 'town', 'county', 'country', 'postcode') VALUES ('21905762', '121', '26/11/98', 'Ho-Seok', 'Jung', '2', 'chesham', 'bucks', 'United Kingdom', 'TP5 2JH')";
-
-$sql2 = "INSERT INTO student('studentid', 'password', 'dob', 'firstname', 'lastname', 'house', 'town', 'county', 'country', 'postcode') VALUES ('21905763', '122', '16/11/97', 'Yoon-Gi', 'Min', '3', 'High Wycombe', 'bucks', 'United Kingdom', 'SU5 2GA')";
-
-$sql3 = "INSERT INTO student('studentid', 'password', 'dob', 'firstname', 'lastname', 'house', 'town', 'county', 'country', 'postcode') VALUES ('21905732', '124', '16/11/96', 'Taehyung', 'v', '7', 'High Wycombe', 'bucks', 'United Kingdom', 'HP5 2BP')";
-
-$sql4 = "INSERT INTO student('studentid', 'password', 'dob', 'firstname', 'lastname', 'house', 'town', 'county', 'country', 'postcode') VALUES ('21905542', '126', '16/1/90', 'Nam-Joon', 'Kim', '1', 'chesham', 'bucks', 'United Kingdom', 'HP5 2RM')";
-
-$sql5 = "INSERT INTO student('studentid', 'password', 'dob', 'firstname', 'lastname', 'house', 'town', 'county', 'country', 'postcode') VALUES ('2190552', '127', '16/1/93', 'Jung', 'Kook', '5', 'chesham', 'bucks', 'United Kingdom', 'HP5 2JK')";
-
-if ($conn->query($sql1) === TRUE) 
-{
-  echo "NEW RECORD CREATED SUCCESSFULY";
+if ($conn->query($sql1) === TRUE){
+	
+	echo "New record created<br/>";
+	} else{
+	echo "Error: " .$sql1."<br/>" . $conn->error;
+	}
+if ($conn->query($sql2) === TRUE){
+	echo "New record created<br/>";
 }
-else 
-{
-  echo "ERROR" . $sql1 . $conn->error;
+else{
+	echo "Error: " .$sql2."<br/>" . $conn->error;
 }
-if ($conn->query($sql2) === TRUE)
-{
-  echo "NEW RECORD CREATED SUCCESSFULY";
+if ($conn->query($sql3) === TRUE){
+	echo "New record created<br/>";
 }
-else 
-{
-  echo "ERROR" . $sql2 . $conn->error;
+else{
+	echo "Error: " .$sql3."<br/>" . $conn->error;
 }
-if ($conn->query($sql3) === TRUE)
-{
-  echo "NEW RECORD CREATED SUCCESSFULY";
+if ($conn->query($sql3) === TRUE){
+	echo "New record created<br/>";
 }
-else 
-{
-  echo "ERROR" . $sql3 . $conn->error;
+else{
+	echo "Error: " .$sql3."<br/>" . $conn->error;
 }
-if ($conn->query($sql4) === TRUE)
-{
-  echo "NEW RECORD CREATED SUCCESSFULY";
+if ($conn->query($sql4) === TRUE){
+	echo "New record created<br/>";
 }
-else 
-{
-  echo "ERROR" . $sql4 . $conn->error;
+else{
+	echo "Error: " .$sql4."<br/>" . $conn->error;
 }
-if ($conn->query($sql5) === TRUE)
-{
-  echo "NEW RECORD CREATED SUCCESSFULY";
+if ($conn->query($sql5) === TRUE){
+	echo "New record created<br/>";
 }
-else 
-{
-  echo "ERROR" . $sql5 . $conn->error;
+else{
+	echo "Error: " .$sql5."<br/>" . $conn->error;
 }
-
+?>

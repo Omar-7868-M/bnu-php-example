@@ -57,9 +57,6 @@ Student Image:
 </form>
 </html>
 
-
-
-
 <?php
    include("_includes/config.inc");
    include("_includes/dbconnect.inc");
@@ -68,24 +65,6 @@ Student Image:
    if (isset($_SESSION['id'])) {
      echo template("templates/partials/header.php");
      echo template("templates/partials/nav.php");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
      
 $data['content'] .= '</form>';
 
@@ -102,8 +81,6 @@ if(isset($_POST['btncreate'])){
   $county = mysqli_real_escape_string($conn, $_POST['txtcounty']);
   $country = mysqli_real_escape_string($conn, $_POST['txtcountry']);
   $postcode = mysqli_real_escape_string($conn, $_POST['txtpostcode']);
-
-
   
   $hashedpass = password_hash($password, PASSWORD_DEFAULT);
   
@@ -114,9 +91,7 @@ if(isset($_POST['btncreate'])){
   {
      echo "<H3>Error: Unfortunately, there is already a student with this ID.</H3>";
   }
-
   else
-
   {
     $result = mysqli_query($conn, " INSERT INTO student(studentid,password,dob,firstname,lastname,
       house,town,county,country,postcode) VALUES
@@ -133,12 +108,8 @@ if(isset($_POST['btncreate'])){
   }
 
   else 
-  
   {   
-
    header("Location: index.php");
-
   }
-  
   echo template("templates/partials/footer.php");
   ?>

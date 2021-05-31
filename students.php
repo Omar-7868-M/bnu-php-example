@@ -1,10 +1,7 @@
 <?php
-
 include("_includes/config.inc");
 include("_includes/dbconnect.inc");
 include("_includes/functions.inc");
-
-
 
 // check logged in
 if (isset($_SESSION['id'])) {
@@ -27,13 +24,11 @@ if (isset($_SESSION['id'])) {
    while($row = mysqli_fetch_array($result)) 
    
    {
-
       $data['content'] .= "<tr><td> $row[studentid] </td><td> $row[dob] </td>";
       $data['content'] .= "<td> $row[firstname] </td><td> $row[lastname] </td>
       <td> $row[house] </td><td> $row[town] </td><td> $row[county] </td><td> $row[country] </td>
       <td> $row[postcode] </td> </td> ";
       $data['content'] .= "<td> <input type ='checkbox' name='delrecords[]' value='".$row['studentid']."' </td></tr> </td>";
-      
    }
 
    $data['content'] .= "</table>";
@@ -44,13 +39,10 @@ if (isset($_SESSION['id'])) {
    if(isset($_POST['delete']))
    
    {
-
      $checkboxcount = count($_POST['delrecords']);
      $i=0;
      while($i<$checkboxcount)
-
      {                                 //count of records to delete
-
        $theid = $_POST['delrecords'][$i];
        mysqli_query($conn, "DELETE FROM student WHERE studentid= '$theid'");
        $i++;
@@ -62,15 +54,11 @@ if (isset($_SESSION['id'])) {
 
    // render the template
    echo template("templates/default.php", $data);
-
 } 
-
 else 
-
 {
    header("Location: index.php");
 }
-
 echo template("templates/partials/footer.php"); 
 mysqli_close($conn);
 ?>

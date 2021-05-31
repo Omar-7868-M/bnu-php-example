@@ -26,7 +26,6 @@ if (isset($_SESSION['id'])) {
    while($row = mysqli_fetch_array($result)) 
    
    {
-      $data['content'] .= "<tr><td><img src='_includes/uploads/$row[picture]'  style='width:10px;height:10px;'></td>"; 
       $data['content'] .= "<tr><td> $row[studentid] </td><td> $row[dob] </td>";
       $data['content'] .= "<td> $row[firstname] </td><td> $row[lastname] </td>
       <td> $row[house] </td><td> $row[town] </td><td> $row[county] </td><td> $row[country] </td>

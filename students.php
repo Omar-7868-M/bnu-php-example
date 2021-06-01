@@ -20,8 +20,6 @@ if (isset($_SESSION['id'])) {
    $data['content'] .= "<tr><th>Photo</th><th>Student ID</th><th>DOB</th><th>First Name</th><th>Last Name</th><th>House</th><th>Town</th>
    <th>County</th><th>Country</th><th>Postcode</th><th>Select</th></tr>";
    
-   
-
    // Display the modules within the html table
    while($row = mysqli_fetch_array($result)) 
    

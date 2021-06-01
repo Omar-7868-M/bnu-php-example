@@ -5,7 +5,6 @@ $db = mysqli_connect("localhost", "pma", "", "cw2");
 
 $image = $_FILES['studentimage']['tmp_name'];
 
-$imagedata = addslashes(fread(fopen)$image, "r"), filesize($image)));
 
 $sql = "INSERT INTO student";
 $sql .= "(StudentID, Password, DOB, FirstName, LastName, House, Town, County, Country, PostCode, Image)";

@@ -113,3 +113,19 @@ if(isset($_POST['btncreate'])){
   }
   echo template("templates/partials/footer.php");
   ?>
+
+<html>
+<head>
+
+<body>
+    <style>
+
+        body
+        {
+            background-color: aqua; 
+        }
+
+    </style>
+
+</body>
+</html>

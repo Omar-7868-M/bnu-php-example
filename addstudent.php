@@ -55,6 +55,14 @@ Student Image:
 <input type ="submit" class = "btn btn-default" value ="Save"/>
 
 </form>
+<style>
+
+body
+{
+    background-color: aqua; 
+}
+
+</style>
 </html>
 
 <?php
@@ -113,19 +121,3 @@ if(isset($_POST['btncreate'])){
   }
   echo template("templates/partials/footer.php");
   ?>
-
-<html>
-<head>
-
-<body>
-    <style>
-
-        body
-        {
-            background-color: aqua; 
-        }
-
-    </style>
-
-</body>
-</html>
